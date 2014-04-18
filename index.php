@@ -7,16 +7,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Compost Creative</title>
-        <meta name="description" content="">
+        <meta name="description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
+advertising clients">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- for Facebook -->          
+        <meta property="og:title" content="Compost Creative" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="http://rob-s-williams.com/" />
+        <meta property="og:description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
+advertising clients" />
+
+        <!-- for Twitter -->          
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Compost Creative" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
+advertising clients" />
 
         <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="compost home">
         <!--[if lt IE 7]>
@@ -24,7 +37,7 @@
         <![endif]-->
 
         <div class="cmp-sidebar">
-            <h1><a href="#">Compost Creative</a></h1>
+            <h1 class="cmp-logo" title="Compost Creative"><a href="#"><span></span>Compost Creative</a></h1>
 
             <ul class="cmp-navigation">
                 <li class="showreels"><a href="#">Showreels</a></li>
@@ -36,17 +49,22 @@
             <p class="view-project"><a href="#">View project</a></p>
 
             <ul class="social-links">
-                <li class="vimeo"><a href="#">Vimeo</a></li>
-                <li class="youtube"><a href="#">YouTube</a></li>
-                <li class="twitter"><a href="#">Twitter</a></li>
-                <li class="other"><a href="#">Other</a></li>
+                <li class="vimeo"><a href="#" class="visuallyhidden">Vimeo</a></li>
+                <li class="youtube"><a href="#" class="visuallyhidden">YouTube</a></li>
+                <li class="twitter"><a href="#" class="visuallyhidden">Twitter</a></li>
+                <li class="easteregg"><a href="#" class="visuallyhidden">Other</a></li>
             </ul>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <div class="carousel" data-paginate>
+            <div class="one image"></div>
+            <div class="two image"></div>
+            <div class="three image"></div>
+            <div class="four image"></div>
+            <div class="five image"></div>
+        </div>
+
+        <script data-main="scripts/minified/bootstrap" src="scripts/require.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
