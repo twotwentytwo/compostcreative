@@ -1,0 +1,8 @@
+
+bootstrap.js
+----------------
+../vendor/jquery-1.10.2.min.js
+responsive-carousel.js
+responsive-carousel.pagination.js
+responsive-carousel.autoinit.js
+bootstrap.js

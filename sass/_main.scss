@@ -97,13 +97,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html {
-    height: 100%;
+html,
+body,
+.carousel {
+  width: 100%;
+  height: 100%;
 }
 
 body {
     font-family: 'Lekton', sans-serif;
     height: 100%;
+    padding:0;
+    margin:0;
 }
 
 ul {
@@ -166,8 +171,10 @@ h1 a {
 .cmp-sidebar {
     width: 250px;
     height: 100%;
-    margin-left: 60px;
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    z-index: 2;
 }
 .cmp-navigation {
     text-align: right;
@@ -216,7 +223,6 @@ h1 a {
     right: 30px;
 }
 
-
 /* carousel */
 
 .carousel {
@@ -233,11 +239,9 @@ h1 a {
     display: none;
 }
 
-/* carousel - pagination */
-
 .carousel-nav-paginated ol {
-    margin: 0 4em;
-    padding: 0;
+ margin: 0;
+ padding: 0;
 }
 .carousel-nav-paginated li,
 .carousel-nav-paginated li a {
@@ -247,12 +251,6 @@ h1 a {
 .carousel-nav-paginated .carousel-active-page a {
     text-decoration: none;
 }
-
-body {
-  padding:0;
-  margin:0;
-}
-
 .carousel-item img {
   width: 100%;
   height: auto;
@@ -260,131 +258,38 @@ body {
 }
 .carousel-nav {
   position: absolute;
-  bottom: 0;
+  top: 350px;
+  left: 178px;
   z-index: 4;
-  width: 100%;
+  width: 112px;
 }
 .carousel-nav a {
-  text-decoration: none;
-  font-size: .8em;
-  background: #fff;
+  background-color:rgba(255,255,255,0.5);
   color: #333;
-  opacity: .8;
-  padding: .5em;
   position: absolute;
   bottom: 0;
   font-weight: bold;
 }
 .carousel-nav a.prev {
-  left: 0;
   display: none;
 }
 .carousel-nav a.next {
-  right: 0;
   display: none;
 }
 .carousel-nav-paginated .carousel-active-page a {
-    background: #333;
-    color: #fff;
-    opacity: .8;
+    background: #fff;
+    color: #333;
 }
-
-
-/* styled arrows */
-.arrows .carousel-nav {
-  bottom: auto;
-  top: 50%;
+.carousel-pagination a {
+    width: 8px;
+    height: 8px;
+    margin-right: 12px;
 }
-.arrows .carousel-nav a {
-  text-indent: -9999px;
-  width: 2em;
-  height: 2em;
-  background: #fff;
-  opacity: .5;
-  overflow: hidden;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  border-radius: 100%;
+.carousel-pagination li:last-child a {
+    margin-right: 0px;
 }
-.arrows .carousel-nav a:hover,
-.arrows .carousel-nav a:focus {
-  opacity: 1;
-}
-.arrows .carousel-nav a.next {
-  background-image: url(arrow-right.png);
-  right: 1em;
-}
-.arrows .carousel-nav a.prev {
-  background-image: url(arrow-left.png);
-  left: 1em;
-}
-
-
-/* peek */
-.carousel.peek {
-   max-width: 500px;
-}
-.carousel.peek .carousel-item-prev,
-.carousel.peek .carousel-item-next {
-  width: 50%;
-  display: block;
-  opacity: .5;
-  position:  absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  -webkit-transform: scale(.6) rotate(-15deg);
-  -moz-transform: scale(.6) rotate(-15deg);
-  -o-transform: scale(.6) rotate(-15deg);
-  -ms-transform: scale(.6) rotate(-15deg);
-  transform: scale(.6) rotate(-15deg);
-}
-.carousel.peek .carousel-item-next {
-  right: 0;
-  left: auto;
-  -webkit-transform: scale(.6) rotate(15deg);
-  -moz-transform: scale(.6) rotate(15deg);
-  -opera-transform: scale(.6) rotate(15deg);
-  -ms-transform: scale(.6) rotate(15deg);
-  transform: scale(.6) rotate(15deg);
-}
-.carousel.peek .carousel-active {
-  width: 50%;
-  opacity: 1;
-  position: relative;
-  left: 25%;
-  z-index: 2;
-  box-shadow: .2em .2em .5em #aaa;
-}
-.carousel.peek .carousel-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-}
-.carousel.peek .carousel-nav a {
-  width: 20%;
-  height: 100%;
-  background: #fff;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-}
-.carousel.peek .carousel-nav a.next {
-  left: auto;
-  right: 0;
-}
-
 
 /* background images  */
-
-html,
-body,
-.carousel {
-  width: 100%;
-  height: 100%;
-}
 
 .one {
   background-image: url('../img/1.jpg');
@@ -401,13 +306,20 @@ body,
   background-size: cover;
 }
 
+.four {
+  background-image: url('../img/4.jpg');
+  background-size: cover;
+}
+
+.five {
+  background-image: url('../img/5.jpg');
+  background-size: cover;
+}
+
 .image {
   width: 100%;
   height: 100%;
 }
-
-
-
 
 
 
