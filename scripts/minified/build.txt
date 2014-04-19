@@ -5,4 +5,5 @@ bootstrap.js
 responsive-carousel.js
 responsive-carousel.pagination.js
 responsive-carousel.autoinit.js
+responsive-carousel.autoplay.js
 bootstrap.js

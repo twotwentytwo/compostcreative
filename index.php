@@ -36,27 +36,9 @@ advertising clients" />
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="cmp-sidebar">
-            <h1 class="cmp-logo" title="Compost Creative"><a href="#"><span></span>Compost Creative</a></h1>
+        <? include('includes/navigation.php'); ?>
 
-            <ul class="cmp-navigation">
-                <li class="showreels"><a href="#">Showreels</a></li>
-                <li class="projects"><a href="#">Projects</a></li>
-                <li class="about"><a href="#">About</a></li>
-                <li class="contact"><a href="#">Contact</a></li>
-            </ul>
-
-            <p class="view-project"><a href="#">View project</a></p>
-
-            <ul class="social-links">
-                <li class="vimeo"><a href="#" class="visuallyhidden">Vimeo</a></li>
-                <li class="youtube"><a href="#" class="visuallyhidden">YouTube</a></li>
-                <li class="twitter"><a href="#" class="visuallyhidden">Twitter</a></li>
-                <li class="easteregg"><a href="#" class="visuallyhidden">Other</a></li>
-            </ul>
-        </div>
-
-        <div class="carousel" data-paginate>
+        <div class="carousel" data-autoplay data-paginate>
             <div class="one image"></div>
             <div class="two image"></div>
             <div class="three image"></div>
