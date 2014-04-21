@@ -6,4 +6,6 @@ responsive-carousel.js
 responsive-carousel.pagination.js
 responsive-carousel.autoinit.js
 responsive-carousel.autoplay.js
+okvideo.js
+template.js
 bootstrap.js
