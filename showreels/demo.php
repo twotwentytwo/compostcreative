@@ -58,6 +58,16 @@ advertising clients" />
             });
         </script>
 
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'right',
+              'numPreferredServices' : 5
+            }   
+          });
+        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

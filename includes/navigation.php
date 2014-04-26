@@ -1,10 +1,12 @@
 <?
 if($page == 'project') :
-	$args = array('post_parent' => 6,'post_type' => 'any', 'numberposts' => -1, 'post_status' => 'any');
+	$args = array('post_parent' => 6,'post_type' => 'any', 'numberposts' => -1, 'post_status' => 'any', 'order' => 'ASC');
 	$pages = get_children($args);
 endif;
 ?>
 <div class="cmp-sidebar">
+    <div class="blur"></div>
+    <div class="pixels"></div>
     <a href="/dev/compostcreative/"><h1 class="cmp-logo" title="Compost Creative"><span></span>Compost Creative</h1></a>
     <ul class="cmp-navigation">
         <li class="showreels"><a href="/dev/compostcreative/showreels/">Showreels</a></li>

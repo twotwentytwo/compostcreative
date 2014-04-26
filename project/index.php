@@ -21,17 +21,16 @@ advertising clients">
 
         <!-- for Facebook -->          
         <meta property="og:title" content="<?=$project->post_title ?> - Compost Creative" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content="http://www.compostcreative.com/project/index.php?id=<?=$id?>" />
+        <meta property="og:image" content="http://twotwentytwo.co.uk/dev/compostcreative/img/template/sharing.png" />
+        <meta property="og:url" content="http://twotwentytwo.co.uk/dev/compostcreative/project/index.php?id=<?=$id?>" />
         <meta property="og:description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
 advertising clients" />
 
         <!-- for Twitter -->          
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="<?=$project->post_title ?> - Compost Creative" />
-        <meta name="twitter:url" content="http://www.compostcreative.com/project/index.php?id=<?=$id?>" />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:url" content="http://twotwentytwo.co.uk/dev/compostcreative/project/index.php?id=<?=$id?>" />
+        <meta name="twitter:image" content="http://twotwentytwo.co.uk/dev/compostcreative/img/template/sharing.png" />
         <meta name="twitter:description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
 advertising clients" />
 
@@ -49,11 +48,25 @@ advertising clients" />
 
         <div class="cmp-content">
             <h2><?=$project->post_title ?></h2>
-            <p><?=$project->post_content ?></p>
             <iframe src="//player.vimeo.com/video/<?=$video_id?>?title=0&badge=0&byline=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p><?=$project->post_content ?></p>
         </div>
 
         <script data-main="../scripts/minified/bootstrap" src="../scripts/require.js"></script>
+
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-535a6c89667d2cd8"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'right',
+              'numPreferredServices' : 5
+            }   
+          });
+        </script>
+        <!-- AddThis Smart Layers END -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
