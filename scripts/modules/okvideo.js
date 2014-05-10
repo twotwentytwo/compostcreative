@@ -42,14 +42,14 @@ var player, OKEvents, options;
         target.append('<div id="okplayer" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:' + zIndex + ';height:100%;width:100%;"></div>');
       }
       else {
-				if (base.options.controls === 3) {
-					target.append(mask)
-				}
-				if (base.options.adproof === 1) {
-					target.append('<div id="okplayer" style="position:' + position + ';left:-10%;top:-10%;overflow:hidden;z-index:' + zIndex + ';height:120%;width:120%;"></div>');
-				} else {
-					target.append('<div id="okplayer" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:' + zIndex + ';height:100%;width:100%;"></div>');
-				}
+        if (base.options.controls === 3) {
+          target.append(mask)
+        }
+        if (base.options.adproof === 1) {
+          target.append('<div id="okplayer" style="position:' + position + ';left:-10%;top:-10%;overflow:hidden;z-index:' + zIndex + ';height:120%;width:120%;"></div>');
+        } else {
+          target.append('<div id="okplayer" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:' + zIndex + ';height:100%;width:100%;"></div>');
+        }
       }
 
       $("#okplayer-mask").css("background-image", "url(" + BLANK_GIF + ")");
@@ -98,9 +98,9 @@ var player, OKEvents, options;
         return '<iframe src="http://player.vimeo.com/video/' + base.options.video.id + '?api=1&title=0&byline=0&portrait=0&playbar=0&loop=' + base.options.loop + '&autoplay=' + (base.options.autoplay === 1 ? 1 : 0) + '&player_id=okplayer" frameborder="0" style="' + $(this).attr('style') + 'visibility:hidden;background-color:black;" id="' + $(this).attr('id') + '"></iframe>';
       });
 
-			// if necessary, debug with the most recent version of froogaloop
-    	// base.insertJS('https://rawgithub.com/vimeo/player-api/master/javascript/froogaloop.js', function(){
-    	base.insertJS('http://a.vimeocdn.com/js/froogaloop2.min.js', function(){
+      // if necessary, debug with the most recent version of froogaloop
+      // base.insertJS('https://rawgithub.com/vimeo/player-api/master/javascript/froogaloop.js', function(){
+      base.insertJS('http://a.vimeocdn.com/js/froogaloop2.min.js', function(){
         vimeoPlayerReady();
       });
     };
@@ -209,17 +209,17 @@ function vimeoPlayerReady() {
   player.addEvent('ready', function () {
     OKEvents.v.onReady();
 
-		// "Do not try to add listeners or call functions before receiving this event."
-		if (OKEvents.utils.isMobile()) {
-			// mobile devices cannot listen for play event
-			OKEvents.v.onPlay();
-		} else {
-			player.addEvent('play', OKEvents.v.onPlay);
-			player.addEvent('pause', OKEvents.v.onPause);
-			player.addEvent('finish', OKEvents.v.onFinish);
-		}
+    // "Do not try to add listeners or call functions before receiving this event."
+    if (OKEvents.utils.isMobile()) {
+      // mobile devices cannot listen for play event
+      OKEvents.v.onPlay();
+    } else {
+      player.addEvent('play', OKEvents.v.onPlay);
+      player.addEvent('pause', OKEvents.v.onPause);
+      player.addEvent('finish', OKEvents.v.onFinish);
+    }
 
-		player.api('play');
+    player.api('play');
   });
 }
 

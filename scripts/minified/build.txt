@@ -8,4 +8,5 @@ responsive-carousel.autoinit.js
 responsive-carousel.autoplay.js
 okvideo.js
 template.js
+mobile-navigation.js
 bootstrap.js

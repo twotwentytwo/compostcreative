@@ -4,15 +4,20 @@ if($page == 'project') :
 	$pages = get_children($args);
 endif;
 ?>
-<div class="cmp-sidebar">
-    <div class="blur"></div>
+<div class="cmp-sidebar clearfix">
     <div class="pixels"></div>
     <a href="/dev/compostcreative/"><h1 class="cmp-logo" title="Compost Creative"><span></span>Compost Creative</h1></a>
+    <div class="cmp-navigation-toggle">
+        <a href="#" id="navigation-toggle">
+            <img src="/dev/compostcreative/img/template/navigation.png" />
+        </a>
+    </div>
+
     <ul class="cmp-navigation">
         <li class="showreels"><a href="/dev/compostcreative/showreels/">Showreels</a></li>
         <li class="project">
         	<a href="/dev/compostcreative/project/index.php?id=11">Projects</a>
-        	<? if($page == 'project') :?>
+        	<?/* if($page == 'project') :?>
 	        	<ul class="featured-projects">
 	        		<? foreach($pages as $webpage) : ?>
 	    				<? $appear_in_navigation = get_post_meta($webpage->ID, 'appear_in_navigation', true);?>
@@ -21,7 +26,7 @@ endif;
 						<? endif; ?>
 					<?endforeach; ?>
 				</ul>
-			<? endif; ?>
+			<? endif; */?>
         </li>
         <li class="about">
         	<a href="/dev/compostcreative/about/">About</a>
@@ -40,13 +45,13 @@ endif;
     		<? endif; ?>
        	</li>
     </ul>
-    <? if($page == 'home'): ?>
+    <? /*if($page == 'home'): ?>
     	<p class="view-project"><a href="#">View project</a></p>
-    <? endif; ?>
+    <? endif; */?>
     <ul class="social-links">
-        <li class="vimeo"><a href="http://vimeo.com/compostcreative" target="_blank" class="visuallyhidden">Vimeo</a></li>
-        <li class="youtube"><a href="https://www.youtube.com/user/colinthornton" target="_blank" class="visuallyhidden">YouTube</a></li>
-        <li class="twitter"><a href="https://twitter.com/CompostCreative" target="_blank" class="visuallyhidden">Twitter</a></li>
-        <li class="easteregg"><a href="#" class="visuallyhidden">Other</a></li>
+        <li class="vimeo"><a href="http://vimeo.com/compostcreative" target="_blank"><img src="/dev/compostcreative/img/icons/vimeo.png" alt="Vimeo" title="Vimeo" /></a></li>
+        <li class="youtube"><a href="https://www.youtube.com/user/colinthornton" target="_blank"><img src="/dev/compostcreative/img/icons/youtube.png" alt="YouTube" title="YouTube" /></a></li>
+        <li class="twitter"><a href="https://twitter.com/CompostCreative" target="_blank"><img src="/dev/compostcreative/img/icons/twitter.png" alt="Twitter" title="Twitter" /></a></li>
+        <li class="easteregg"><a href="#"></a></li>
     </ul>
 </div>
