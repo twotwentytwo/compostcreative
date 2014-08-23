@@ -1,5 +1,6 @@
 <?
-$page = 'about';
+require ('../admin/wp-blog-header.php');
+include('../includes/header.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -13,7 +14,6 @@ $page = 'about';
         <meta name="description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
 advertising clients">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- for Facebook -->          
         <meta property="og:title" content="About - Compost Creative" />
         <meta property="og:type" content="article" />
@@ -21,7 +21,6 @@ advertising clients">
         <meta property="og:url" content="http://www.compostcreative.com/about" />
         <meta property="og:description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
 advertising clients" />
-
         <!-- for Twitter -->          
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="About - Compost Creative" />
@@ -29,31 +28,19 @@ advertising clients" />
         <meta name="twitter:image" content="" />
         <meta name="twitter:description" content="We are a visual effects team creating leading broadcast graphics for TV, corporate and
 advertising clients" />
-
         <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
-
         <link rel="stylesheet" href="../css/style.css">
         <script src="../scripts/vendor/modernizr-2.6.2.min.js"></script>
+        <? include('../includes/variables.php'); ?>
     </head>
-    <body class="compost <?=$page?>-page">
+    <body class="compost about-page">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <? include('../includes/navigation.php'); ?>
-
+        <div class="cmp-content-container">
+            <? include('../includes/about.php'); ?>
+        </div>
         <script data-main="../scripts/minified/bootstrap" src="../scripts/require.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        -->
-
     </body>
 </html>

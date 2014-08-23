@@ -1,0 +1,966 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html,
+body,
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+    font-family: 'Lekton', sans-serif;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+li {
+    padding:0;
+    margin:0;
+}
+
+h1 {
+    padding:0;
+    margin:0;
+}
+
+/* colors */
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+.social-links a {
+    color: #000;
+    background: #fff;
+}
+.view-project a {
+    color: #fff;
+    text-decoration:none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.view-project {
+    border: 1px solid #fff;
+}
+.cmp-navigation a {
+    color: #fff;
+}
+
+
+/* template */
+
+.cmp-logo {
+    width: 200px;
+    height: 32px;
+    position: relative;
+    font-size: 0em;
+    z-index: 2;
+}
+.cmp-logo span {
+    background: url(../img/template/logo.png) no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.view-project {
+    padding: 4px 8px;
+    position: absolute;
+    right: 30px;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 0px) and (max-width : 599px) {
+
+
+    h2 {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    .cmp-sidebar {
+        background-color:rgba(0,0,0,0.3);
+        height: 60px;
+        width: 100%;
+        position:relative;
+        z-index: 2;
+    }
+
+    .cmp-logo {
+        margin-top: 11px;
+        margin-left: 8px;
+        margin-bottom: 18px;
+    }
+
+    .cmp-navigation-toggle {
+        position: relative;
+        z-index: 2;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .cmp-navigation-toggle img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .cmp-navigation {
+        transition: all 0.3s ease-in-out;
+        background-color: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 0;
+        overflow:hidden;
+    }
+
+    .cmp-navigation.open {
+        height: 128px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cmp-navigation li {
+        display: inline-block;
+        line-height: 64px;
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+
+    .cmp-navigation li a {
+        text-decoration: none;
+    }
+
+    .social-links {
+        display:none;
+    }
+
+    .cmp-content {
+        margin-top: 0;
+        background-color:rgba(255,255,255,0.8);
+        padding: 2px 8px;
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .projects-page .cmp-content {
+        background: none;
+    }
+
+    .cmp-content.open {
+        margin-top: 128px;
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    /* projects */
+
+    .cmp-project {
+        min-height: 74px;
+        margin-bottom: 8px;
+    }
+
+    .cmp-project a {
+        text-decoration: none;
+    }
+    
+    .cmp-project a:hover {
+        text-decoration: underline;
+    }
+
+    .pjt-image {
+        width: 40%;
+        float: left;
+        margin-right: 8px;
+    }
+
+    .pjt-title {
+        color: #000;
+        padding: 0;
+        margin: 0;
+        background: rgba(255,255,255,0.8);
+        padding-left: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    /* project */
+
+    .js-video {
+      height: 0;
+      padding-top: 25px;
+      padding-bottom: 67.5%;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+     
+    .js-video.widescreen {
+      padding-bottom: 56.5%;
+    }
+     
+    .js-video.vimeo {
+      padding-top: 0;
+    }
+
+    .js-video embed, .js-video iframe, .js-video object, .js-video video {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+
+
+    /* carousel */
+
+    .carousel {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        top:-60px;
+    }
+    .carousel .carousel-item {
+        display: none;
+    }
+    .carousel .carousel-active {
+        display: block;
+    }
+    .carousel .carousel-nav:nth-child(2) {
+        display: none;
+    }
+
+    .carousel-nav-paginated ol {
+     margin: 0;
+     padding: 0;
+    }
+    .carousel-nav-paginated li,
+    .carousel-nav-paginated li a {
+        display: inline-block;
+        position: relative;
+    }
+    .carousel-nav-paginated .carousel-active-page a {
+        text-decoration: none;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 350px;
+      left: 178px;
+      z-index: 4;
+      width: 112px;
+      display:none;
+    }
+    .carousel-nav a {
+      background-color:rgba(255,255,255,0.5);
+      color: #333;
+      position: absolute;
+      bottom: 0;
+      font-weight: bold;
+    }
+    .carousel-nav a.prev {
+      display: none;
+    }
+    .carousel-nav a.next {
+      display: none;
+    }
+    .carousel-nav-paginated .carousel-active-page a {
+        background: #fff;
+        color: #333;
+    }
+    .carousel-pagination a {
+        width: 8px;
+        height: 8px;
+        margin-right: 12px;
+    }
+    .carousel-pagination li:last-child a {
+        margin-right: 0px;
+    }
+
+    /* background images  */
+
+    .one {
+      background-image: url('../img/homepage/mobile/1.jpg');
+      background-size: cover;
+    }
+
+    .two {
+      background-image: url('../img/homepage/mobile/2.jpg');
+      background-size: cover;
+    }
+
+    .three {
+      background-image: url('../img/homepage/mobile/3.jpg');
+      background-size: cover;
+    }
+
+    .four {
+      background-image: url('../img/homepage/mobile/4.jpg');
+      background-size: cover;
+    }
+
+    .five {
+      background-image: url('../img/homepage/mobile/5.jpg');
+      background-size: cover;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 
+
+    .carousel-fade {
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        display: block; 
+        -webkit-transition: opacity .5s ease;
+        -moz-transition: opacity .5s ease;
+        -ms-transition: opacity .5s ease;
+        -o-transition: opacity .5s ease;
+        transition: opacity .5s ease;
+    }
+    .carousel-fade .carousel-active {
+        position: relative;
+    }
+
+    .carousel-item {
+        opacity: 0;
+    }
+
+    .carousel-active {
+        opacity: 1;
+    }
+
+    .carousel-fade .carousel-out {
+        opacity: 0;
+    }
+
+    .carousel-fade .carousel-in {
+        opacity: 1;
+    }
+
+    .carousel-slide {
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-slide .carousel-item {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 100%; 
+        display: block; 
+        z-index: 1;
+        -webkit-transition: left .2s ease;
+        -moz-transition: left .2s ease;
+        -ms-transition: left .2s ease;
+        -o-transition: left .2s ease;
+        transition: left .2s ease;
+    }
+    .carousel-no-transition .carousel-item {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .carousel-slide .carousel-active {
+        left: 0;
+        position: relative;
+        z-index: 2;
+    }
+    .carousel-slide .carousel-in {
+        left: 0;
+    }
+    .carousel-slide-reverse .carousel-out {
+        left: 100%;
+    }
+    .carousel-slide .carousel-out,
+    .carousel-slide-reverse .carousel-in {
+        left: -100%;
+    }
+    .carousel-slide-reverse .carousel-item {
+        -webkit-transition: left .1s ease;
+        -moz-transition: left .1s ease;
+        -ms-transition: left .1s ease;
+        -o-transition: left .1s ease;
+        transition: left .1s ease;
+    }
+    .carousel-slide-reverse .carousel-active {
+        left: 0;
+    }
+    */
+
+}
+
+/* Mobile (portrait) ----------- */
+@media only screen and (min-width : 0px) and (max-width : 599px) and (orientation : portrait) {
+
+}
+
+/* Mobile (landscape) ----------- */
+@media only screen and (min-width : 0px) and (max-width : 599px) and (orientation : landscape) {
+
+}
+
+/* Tablets (portrait) ----------- */
+@media only screen and (min-width : 600px) and (max-width : 799px) {
+
+}
+
+/* Tablets (landscape) ----------- */
+@media only screen and (min-width : 800px) and (max-width : 1024px) {
+
+}
+
+/* Tablets (landscape) ----------- */
+@media only screen and (min-width : 1024px) {
+
+    .cmp-navigation-toggle {
+        display:none;
+    }
+
+    .cmp-logo {
+        margin: 50px 0 50px 40px;
+    }
+
+    /* navigation */
+
+    .cmp-navigation {
+        text-align: right;
+        margin-right: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .cmp-navigation li {
+        line-height: 2.4em;
+    }
+    .cmp-navigation a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+
+    .showreels-page .cmp-navigation .showreels a,
+    .project-page .cmp-navigation .project a,
+    .about-page .cmp-navigation .about a, 
+    .contact-page .cmp-navigation .contact a {
+        text-decoration: underline;
+    }
+
+    .project-page .cmp-navigation .featured-projects li {
+        padding:0;
+        margin:0;
+        line-height: 1.4em;
+    }
+
+    .project-page .cmp-navigation .featured-projects li a {
+        text-transform: none;
+        text-decoration: none;
+    }
+
+    .project-page .cmp-navigation .featured-projects li a:hover, 
+    .project-page .cmp-navigation .featured-projects li a:active, 
+    .project-page .cmp-navigation .featured-projects li a:focus {
+        text-transform: underline;
+    }
+
+    .cmp-navigation .info p {
+        padding:0;
+        margin:0;
+        color: #fff;
+        font-size: 1em;
+        margin-top: 1em;
+        line-height: 1.6em;
+    }
+
+    .cmp-navigation .info p {
+        font-size: 0.8em;
+    }
+
+    .contact-page .cmp-navigation .info a {
+        text-transform: none;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .contact-page .cmp-navigation .info a:hover, 
+    .contact-page .cmp-navigation .info a:focus, 
+    .contact-page .cmp-navigation .info a:active {
+        text-decoration: underline;
+    }
+
+    .social-links {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+    .social-links li {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        overflow: hidden;
+    }
+    .social-links .vimeo {
+        background-image: url(../img/icons/vimeo.png);
+    }
+
+    .social-links .youtube {
+        background-image: url(../img/icons/youtube.png);
+    }
+
+    .social-links .twitter {
+        background-image: url(../img/icons/twitter.png);
+    }
+
+    .social-links .easteregg {
+        background-image: url(../img/icons/easteregg.png);
+    }
+
+    .cmp-sidebar {
+        width: 250px;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 60px;
+    }
+
+    .cmp-sidebar .pixels {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+
+    .cmp-sidebar .blur {
+        background-color:rgba(0,0,0,0.1);
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        z-index: 0;
+    }
+
+    .project-page .cmp-sidebar .blur {
+        background-color:rgba(0,0,0,0.1);
+    }
+
+    /* content */
+
+    .cmp-content {
+        width: 960px;
+        margin-left: 342px;
+        padding: 20px 30px;
+        background-color:rgba(255,255,255,0.8);
+    }
+
+    .cmp-content iframe {
+        width: 960px;
+        height: 540px;
+    }
+
+    /* projects */
+
+    .cmp-project {
+        float:left;
+        width: 238px;
+        height: 134px;
+        margin-right: 16px;
+        position: relative;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+
+    .cmp-project a .pjt-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #000;
+        text-decoration: none;
+        background-color:rgba(255,255,255,0.8);
+        margin:0;
+        width: 100%;
+        padding: 4px;
+    }
+
+    /* about */
+
+    .about-page .cmp-content {
+        display: none;
+    }
+
+    .about-page .cmp-content > h2{
+        display: none;
+    }
+
+    /* contact */
+
+    .contact-page .cmp-content {
+        display: none;
+    }
+
+    .contact-page .cmp-content > h2{
+        display: none;
+    }
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+    .cmp-logo span {
+        background: url(../img/template/logo_mobile.png) no-repeat;
+        background-size:200px 32px;
+    }
+
+}
+
+/* Mobile video 320px 
+@media only screen and (min-width : 0px) and (max-width : 320px) {
+    .cmp-content iframe {
+        width: 304px;
+        height: 171px;
+    }
+}
+@media only screen and (min-width : 321px) and (max-width : 360px) {
+    .cmp-content iframe {
+        width: 344px;
+        height: 185px;
+    }
+}
+@media only screen and (min-width : 361px) and (max-width : 400px) {
+    .cmp-content iframe {
+        width: 368px;
+        height: 207px;
+    }
+}
+@media only screen and (min-width : 401px) and (max-width : 600px) {
+    .cmp-content iframe {
+        width: 584px;
+        height: 329px;
+    }
+}
+*/
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

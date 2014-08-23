@@ -3,10 +3,9 @@ bootstrap.js
 ----------------
 ../vendor/jquery-1.10.2.min.js
 responsive-carousel.js
-responsive-carousel.pagination.js
-responsive-carousel.autoinit.js
 responsive-carousel.autoplay.js
-okvideo.js
+responsive-carousel.autoinit.js
 template.js
 mobile-navigation.js
+okvideo.js
 bootstrap.js

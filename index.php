@@ -1,5 +1,10 @@
 <?
+require("admin/wp-blog-header.php");
 $page = 'home';
+
+/* template */
+$homepage = get_page(89);
+$background_video_id = get_post_meta($homepage->ID, 'background_video_id', true);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -34,6 +39,7 @@ advertising clients" />
 
         <link rel="stylesheet" href="css/style.css">
         <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+        <? include('includes/variables.php'); ?>
     </head>
     <body class="compost home-page">
         <!--[if lt IE 7]>
@@ -42,12 +48,17 @@ advertising clients" />
 
         <? include('includes/navigation.php'); ?>
 
-        <div class="carousel" data-autoplay data-paginate>
+        <div class="carousel" data-transition="fade" data-autoplay>
             <div class="one image"></div>
             <div class="two image"></div>
             <div class="three image"></div>
             <div class="four image"></div>
             <div class="five image"></div>
+            <div class="six image"></div>
+            <div class="seven image"></div>
+            <div class="eight image"></div>
+            <div class="nine image"></div>
+            <div class="ten image"></div>
         </div>
 
         <script data-main="scripts/minified/bootstrap" src="scripts/require.js"></script>

@@ -32,6 +32,7 @@ define(["jquery"], function($) {
             $(toggle_button).on("click", function(e) {
                 if (e.preventDefault) { e.preventDefault(); } else { e.returnValue = false; }
                 $(".cmp-navigation").toggleClass("open");
+                $(".cmp-content-container").toggleClass("open");
             });
         }    
     };

@@ -8,32 +8,31 @@
 
 (function( $, undefined ) {
 	var pluginName = "carousel",
-		initSelector = "." + pluginName,
-		interval = 8000,
+		interval = 4000,
 		autoPlayMethods = {
 			play: function(){
 				var $self = $( this ),
 					intAttr = $self.attr( "data-interval" ),
 					thisInt = parseFloat( intAttr ) || interval;
 				return $self.data(
-					"timer", 
+					"timer",
 					setInterval( function(){
 						$self[ pluginName ]( "next" );
 					},
 					thisInt )
 				);
 			},
-			
+
 			stop: function(){
 				clearTimeout( $( this ).data( "timer" ) );
 			},
-			
+
 			_bindStopListener: function(){
 				return $(this).bind( "mousedown", function(){
 					$( this )[ pluginName ]( "stop" );
 				} );
 			},
-			
+
 			_initAutoPlay: function(){
 				var autoplay = $( this ).attr( "data-autoplay");
 				if( autoplay === true || ( autoplay !== null && autoplay !== false ) ){
@@ -43,13 +42,13 @@
 				}
 			}
 		};
-			
+
 	// add methods
-	$.extend( $.fn[ pluginName ].prototype, autoPlayMethods ); 
-	
+	$.extend( $.fn[ pluginName ].prototype, autoPlayMethods );
+
 	// DOM-ready auto-init
-	$( document ).on( "create." + pluginName, initSelector, function(){
-		$( this )[ pluginName ]( "_initAutoPlay" );
-	} );
+	$( document ).bind(  "create." + pluginName, function( e ){
+		$( e.target )[ pluginName ]( "_initAutoPlay" );
+	});
 
 }(jQuery));
