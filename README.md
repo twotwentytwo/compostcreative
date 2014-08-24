@@ -1,3 +1,3 @@
 # [Compost Creative](http://www.compostcreative.com/)
 
-More to follow soon ...
+This is the portfolio website for Compost Creative - a visual effects and animation agency for TV, film and web.
