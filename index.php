@@ -48,7 +48,7 @@ advertising clients" />
 
         <? include('includes/navigation.php'); ?>
 
-        <div class="carousel" data-transition="fade" data-autoplay>
+        <div class="carousel" data-autoplay>
             <div class="one image"></div>
             <div class="two image"></div>
             <div class="three image"></div>
